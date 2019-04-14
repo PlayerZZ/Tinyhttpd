@@ -1,12 +1,14 @@
-emmm 带//的是我的强行解读，错了欢迎指出……
+我的强行解读！！！
+======
 
-//所以其实比较老牌的项目 sourceforge比较多？目前了解到的代码托管就只有github gitlab，现在知道了一个sourceforge…… 据说是基于svn,csv 
-//又搜了一下csv 不出所料是逗号分隔符文件，跟svn一起搜，目测就是一个比svn差劲的代码管理工具……目前没有时间去了解细节了……
+  //所以其实比较老牌的项目 sourceforge比较多？目前了解到的代码托管就只有github gitlab，现在知道了一个sourceforge…… 据说是基于svn,csv 
+  //又搜了一下csv 不出所料是逗号分隔符文件，跟svn一起搜，目测就是一个比svn差劲的代码管理工具……目前没有时间去了解细节了……
 A mirror for tinyhttpd(Tinyhttpd非官方镜像,Fork自[sourceForge](https://sourceforge.net/projects/tiny-httpd/),仅供学习)
 
-//这里又有一个新的脚本语言 perl 为什么要用perl 而不是python 或者tcl之类的呢？因为版本比较老还是依赖？
-//qt静态编译的时候好像也是要这个perl 所以我需要先学习一下perl吗？花十分钟看一下语法好了……
-//
+  //这里又有一个新的脚本语言 perl 为什么要用perl 而不是python 或者tcl之类的呢？因为版本比较老还是依赖？
+  //qt静态编译的时候好像也是要这个perl 所以我需要先学习一下perl吗？花十分钟看一下语法好了……
+  //看了一下，可能我瞎吧，目测跟python没有区别，所以应该把注意力放在cgi上吗？
+  //emmm 看了一下cgi，其实就是提交表单一样的东西，就跟postman性质一样呢……
 测试CGI时需要本机安装PERL，同时安装perl-cgi
 
 ### Prepare 
