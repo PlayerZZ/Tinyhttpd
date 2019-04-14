@@ -14,7 +14,7 @@ A mirror for tinyhttpd(Tinyhttpd非官方镜像,Fork自[sourceForge](https://sou
 ### Prepare 
 Compile for Linux
 
-    comment out 居然是注释……
+    comment out 居然是注释…… linux 是有pthread的啊，而且windows才没有吧，应该注释的是windows?
     我在想它就不能定义一个条件编译宏吗？
     
 ```
@@ -25,7 +25,9 @@ Compile for Linux
   4) Uncomment the line that runs accept_request().
   5) Remove -lsocket from the Makefile.
 ```
-
+        所以这里其实是http服务器的一些概念的引入
+            request 请求  cat 读取  cgi 通过表单请求  error_die 错误处理 header 请求头
+            倒也不是全不懂，但是确实有些不懂……比如header里面
 <p>&nbsp; &nbsp; &nbsp;每个函数的作用：</p>
 <p>&nbsp; &nbsp; &nbsp;accept_request: &nbsp;处理从套接字上监听到的一个 HTTP 请求，在这里可以很大一部分地体现服务器处理请求流程。</p>
 <p>&nbsp; &nbsp; &nbsp;bad_request: 返回给客户端这是个错误请求，HTTP 状态吗 400 BAD REQUEST.</p>
@@ -44,6 +46,8 @@ Compile for Linux
 <p>&nbsp; &nbsp; &nbsp;建议源码阅读顺序： main -&gt; startup -&gt; accept_request -&gt; execute_cgi, 通晓主要工作流程后再仔细把每个函数的源码看一看。</p>
 <p><br>
 </p>
+        
+        我觉得我可以先启动一下再看源代码，有个大致了解的好
 <h4>&nbsp; &nbsp; &nbsp;工作流程</h4>
 <p>&nbsp; &nbsp; &nbsp;（1） 服务器启动，在指定端口或随机选取端口绑定 httpd 服务。</p>
 <p>&nbsp; &nbsp; &nbsp;（2）收到一个 HTTP 请求时（其实就是 listen 的端口 accpet 的时候），派生一个线程运行 accept_request 函数。</p>
